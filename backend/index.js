@@ -18,6 +18,20 @@ conexion.connect((error) => {
     }
     console.log('Conexion exitosa washooooo');
   });
+
+
+//crear usuarios
+exports.agregarUsuario = (nuevoUsuario, callback) => {
+    conexion.query('INSERT INTO usuarios SET ?', nuevoUsuario, (error, resultados) => {
+      if (error) {
+        console.error('Error al insertar nuevo usuario:', error);
+        callback(error, null);
+        return;
+      }
+      console.log('Nuevo usuario registrado:', resultados.insertId);
+      callback(null, resultados.insertId);
+    });
+  };
   
 
 //levantar el servidor en el puerto 3000
