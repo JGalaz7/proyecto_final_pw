@@ -11,3 +11,4 @@ para iniciar el servidor se debe importar expres, crear la instancia, declarar e
 primera prueba: al parecer la primera prueba es exitosa ya que se puede ver en el navegador el servidor con el mensaje creado en la ruta de prueba, ahora seguire con la conexin a la base de datos
 
 para la base de datos se instala la dependencia "npm i mysql2" 
+
